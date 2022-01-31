@@ -28,6 +28,7 @@ Postman Client <--> Controller <--> Service <--> DAO <--> DB
 - utils (Contains utilities and classes)
 - repository (Contains Spring Data JPA repositories)
 - exception (Contains all custom exceptions)
+- payload (Contains DTO objects that act as a payload between client and server)
 
 ## Annotations
 ### Spring Boot Annotations
