@@ -1,6 +1,10 @@
 # springboot-blog-rest-api
-maven project, spring boot 2.6.3, java 11
-# Dependencies
+<a href="https://maven.apache.org/"><img alt="maven" src="https://img.shields.io/badge/maven-blue"/></a>
+<a href="https://spring.io/projects/spring-boot/"><img alt="Spring Boot" src="https://img.shields.io/badge/SpringBoot-2.6.3-blue"/></a>
+<a href="https://docs.oracle.com/en/java/javase/11/"><img alt="Java 11" src="https://img.shields.io/badge/Java-11-blue"/></a>
+<a href="https://dev.mysql.com/"><img alt="MySQL" src="https://img.shields.io/badge/MySQL-8.0.28-blue"/></a>
+
+## Dependencies
 Spring dependencies used are as follows:
 - Spring Web (Use to build web applications as well as RESTful web services. Internally uses Apache Tomcat as default web container.)
 - Spring Data JPA (Communicate with database, Abstraction above JPA and internally uses Hibernate JPA provider)
@@ -8,7 +12,7 @@ Spring dependencies used are as follows:
 - Lombok (Annotation library that helps to reduce boiler plate code like getters, setters, constructors, toSting etc.)
 - Spring Boot DevTools (Any change in spring boot application doesn't require re-start)
 
-# Project Architecture Explained
+## Project Architecture Explained
 3 layer Architecture
 TODO: add spring boot project architecture diagram
 Postman Client <--> Controller <--> Service <--> DAO <--> DB
@@ -16,7 +20,7 @@ Postman Client <--> Controller <--> Service <--> DAO <--> DB
 - Service (all service class that hold business logic)
 - DAO (Repository layer, keep all spring JPA data repository, Communicates with database)
 
-# Project Structure Explained
+## Project Structure Explained
 - controller (Contains all Spring MVC controllers)
 - entity (Contains all JPA entities)
 - service (Contains service interfaces)
