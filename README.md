@@ -28,8 +28,13 @@ Postman Client <--> Controller <--> Service <--> DAO <--> DB
 - utils (Contains utilities and classes)
 - repository (Contains Spring Data JPA repositories)
 - exception (Contains all custom exceptions)
+- payload (Contains DTO objects that act as a payload between client and server)
 
 ## Annotations
+### Spring Boot Annotations
+- @SpringBootApplication (Marks entry point of spring application)
+- @ResponseStatus (Cause spring boot to respond with the specified HTTP status code whenever this exception is thrown from controller)
+
 ### Lombok annotations
 - @Data (Generates getters, setters, toString, hashCode, equals at runtime. Equivalent to {@code @Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode})
 - @AllArgsConstructor (Generates all argument constructor)
