@@ -30,6 +30,10 @@ Postman Client <--> Controller <--> Service <--> DAO <--> DB
 - exception (Contains all custom exceptions)
 
 ## Annotations
+### Spring Boot Annotations
+- @SpringBootApplication (Marks entry point of spring application)
+- @ResponseStatus (Cause spring boot to respond with the specified HTTP status code whenever this exception is thrown from controller)
+
 ### Lombok annotations
 - @Data (Generates getters, setters, toString, hashCode, equals at runtime. Equivalent to {@code @Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode})
 - @AllArgsConstructor (Generates all argument constructor)
