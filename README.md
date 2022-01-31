@@ -28,3 +28,15 @@ Postman Client <--> Controller <--> Service <--> DAO <--> DB
 - utils (Contains utilities and classes)
 - repository (Contains Spring Data JPA repositories)
 - exception (Contains all custom exceptions)
+
+## Annotations
+### Lombok annotations
+- @Data (Generates getters, setters, toString, hashCode, equals at runtime. Equivalent to {@code @Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode})
+- @AllArgsConstructor (Generates all argument constructor)
+- @NoArgsConstructor (Generates no argument constructor)
+
+### JPA annotations
+- @Entity, @Table (To map JPA entity with MySQL tables. If @Table annotation is not given then table with className is created.)
+- @Id (Define primary key of entity)
+- @GeneratedValue (To provide primary key genration strategy)
+- @Column (Optional annotation. Can be used to provide column name to the table. If not added, JPA will consider property name as column name of the table)
