@@ -34,6 +34,9 @@ Postman Client <--> Controller <--> Service <--> DAO <--> DB
 ### Spring Boot Annotations
 - @SpringBootApplication (Marks entry point of spring application)
 - @ResponseStatus (Cause spring boot to respond with the specified HTTP status code whenever this exception is thrown from controller)
+- @Service (Indicates that the class is a service class. It is available for auto-detection while component scanning. Can be injected (autowired) in other classes)
+- @RestController (It internally uses @Controller annotation to cconvert java object to json)
+- @PostMapping (Combination of @RequestMapping annotation and Request method 'post')
 
 ### Lombok annotations
 - @Data (Generates getters, setters, toString, hashCode, equals at runtime. Equivalent to {@code @Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode})
