@@ -41,6 +41,7 @@ Postman Client <--> Controller <--> Service <--> DAO <--> DB
 - @GetMapping (Used to annotate handler method to handle HTTP GET request. Combination of @RequestMapping annotation and Request method 'get'.)
 - @PathVariable (Bind url template variable into method argument)
 - @PutMapping (Used to annotate handler method to handle HTTP PUT request. Combination of @RequestMapping annotation and Request method 'put')
+- @DeleteMapping (Used to annotate handler method to handle HTTP DELETE request. Combination of @RequestMapping annotation and Request method 'delete')
 
 ### Lombok annotations
 - @Data (Generates getters, setters, toString, hashCode, equals at runtime. Equivalent to {@code @Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode})
