@@ -40,9 +40,25 @@ public class PostServiceImpl implements PostService{
 		return posts.stream().map(post -> mapToDTO(post)).collect(Collectors.toList());
 	}
 	
+	@Override
 	public PostDto getPostById(long id) {
 		Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
 		return mapToDTO(post);
+	}
+	
+	@Override
+	public PostDto updatePost(long id, PostDto postDto) {
+		// get post by id from the database
+		Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
+		
+		// update fields
+		post.setTitle(postDto.getTitle());
+		post.setDescription(postDto.getDescription());
+		post.setContent(postDto.getContent());
+		
+		// save updated value into db
+		Post updatedPost = postRepository.save(post);
+		return mapToDTO(updatedPost);
 	}
 
 	private PostDto mapToDTO(Post newPost) {

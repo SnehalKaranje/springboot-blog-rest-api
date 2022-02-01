@@ -40,6 +40,7 @@ Postman Client <--> Controller <--> Service <--> DAO <--> DB
 - @PostMapping (Combination of @RequestMapping annotation and Request method 'post')
 - @GetMapping (Combination of @RequestMapping annotation and Request method 'get')
 - @PathVariable (Bind url template variable into method argument)
+- @PutMapping (Combination of @RequestMapping annotation and Request method 'put')
 
 ### Lombok annotations
 - @Data (Generates getters, setters, toString, hashCode, equals at runtime. Equivalent to {@code @Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode})
