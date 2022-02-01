@@ -39,6 +39,7 @@ Postman Client <--> Controller <--> Service <--> DAO <--> DB
 - @RequestMapping (The class-level annotation maps a specific request path or pattern onto a controller. )
 - @PostMapping (Combination of @RequestMapping annotation and Request method 'post')
 - @GetMapping (Combination of @RequestMapping annotation and Request method 'get')
+- @PathVariable (Bind url template variable into method argument)
 
 ### Lombok annotations
 - @Data (Generates getters, setters, toString, hashCode, equals at runtime. Equivalent to {@code @Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode})
