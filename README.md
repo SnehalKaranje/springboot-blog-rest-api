@@ -72,3 +72,6 @@ Postman Client <--> Controller <--> Service <--> DAO <--> DB
 - <a href="https://www.techferry.com/articles/hibernate-jpa-annotations.html#Id"><img alt="Id" src="https://img.shields.io/badge/@Id-blue"/></a> Define primary key of entity
 - <a href="https://www.techferry.com/articles/hibernate-jpa-annotations.html#GeneratedValue"><img alt="GeneratedValue" src="https://img.shields.io/badge/@GeneratedValue-blue"/></a> To provide primary key genration strategy.
 - <a href="https://www.techferry.com/articles/hibernate-jpa-annotations.html#Column"><img alt="Column" src="https://img.shields.io/badge/@Column-blue"/></a> Optional annotation. Can be used to provide column name to the table. If not added, JPA will consider property name as column name of the table.
+- @ManyToOne
+- @JoinColumn
+- @OneToMany
