@@ -1,19 +1,25 @@
 package com.springboot.blog.exception;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import com.springboot.blog.payload.ErrorDetails;
 
 // internally uses @Component annotation. 
 // So, this class will be auto detected during component scanning
 @ControllerAdvice
-public class GlobalExceptionHandler {
+public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 	
 	// handle specific exception
 	@ExceptionHandler(ResourceNotFoundException.class)
@@ -39,5 +45,17 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<ErrorDetails> handleGlobalException(Exception exception, WebRequest webRequest) {
 		ErrorDetails errorDetails = new ErrorDetails(HttpStatus.INTERNAL_SERVER_ERROR, new Date(), exception.getMessage(), webRequest.getDescription(false));
 		return new ResponseEntity<ErrorDetails>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	@Override
+	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
+			HttpHeaders headers, HttpStatus status, WebRequest request) {
+		Map<String, String> errors = new HashMap<>();
+		ex.getBindingResult().getAllErrors().forEach((error) -> {
+			String filedName  = ((FieldError)error).getField();
+			String message = ((FieldError)error).getDefaultMessage();
+			errors.put(filedName, message);
+		});
+		return new ResponseEntity<Object>(errors, HttpStatus.BAD_REQUEST);
 	}
 }

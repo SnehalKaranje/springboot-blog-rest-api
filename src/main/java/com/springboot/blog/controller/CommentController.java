@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springboot.blog.payload.CommentDto;
-import com.springboot.blog.repository.CommentRepository;
 import com.springboot.blog.service.CommentService;
 
 @RestController
