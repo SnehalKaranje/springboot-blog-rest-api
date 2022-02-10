@@ -1,5 +1,7 @@
 package com.springboot.blog.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -29,7 +31,7 @@ public class PostController {
 	
 	// create blob post
 	@PostMapping("/posts")
-	public ResponseEntity<PostDto> createPost(@RequestBody PostDto postDto) {
+	public ResponseEntity<PostDto> createPost(@Valid @RequestBody PostDto postDto) {
 		return new ResponseEntity<>(postService.createPost(postDto), HttpStatus.CREATED);
 	}
 	
@@ -52,7 +54,7 @@ public class PostController {
 	
 	// update post by id
 	@PutMapping("/posts/{id}")
-	public ResponseEntity<PostDto> updatePost(@PathVariable(name="id") long id, @RequestBody PostDto postDto) {
+	public ResponseEntity<PostDto> updatePost(@PathVariable(name="id") long id, @Valid @RequestBody PostDto postDto) {
 		return new ResponseEntity<>(postService.updatePost(id, postDto), HttpStatus.OK);
 	}
 	
