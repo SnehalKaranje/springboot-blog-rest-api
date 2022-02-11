@@ -1,12 +1,12 @@
 - 3 layer Architecture: Client <--> Controller <--> Service <--> DAO <--> DB
 - Add new rest API end point flow:
-  - DAO Layer
+  - [x] DAO Layer
     - Add entity class
     - Add respository class
-  - Service Layer
+  - [x] Service Layer
     - Define Interface
     - Implementation
-  - Controller Layer
+  - [x] Controller Layer
     - Controller class that has all the end points defined
 - Can add custom exceptions
 - DTO objects
