@@ -19,6 +19,7 @@ Dependencies used are as follows:
 
 
 ## Project Architecture
+```
 3 layer Architecture : Client <--> Controller <--> Service <--> DAO <--> DB
 
 - Controller
@@ -30,9 +31,10 @@ Dependencies used are as follows:
   - Repository layer
   - keep all spring JPA data repository
   - Communicates with database
-
+```
 
 ## Project Structure Explained
+```
 - controller
   - Contains all Spring MVC controllers
 - entity
@@ -49,7 +51,7 @@ Dependencies used are as follows:
   - Contains all custom exceptions
 - payload
   - Contains DTOs (Data Transfer Objects) that act as a payload between client and server
-
+```
 
 ## Annotations
 ### Spring Boot Annotations
