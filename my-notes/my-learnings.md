@@ -1,0 +1,21 @@
+- 3 layer Architecture: Client <--> Controller <--> Service <--> DAO <--> DB
+- Add new rest API end point flow:
+  - DAO Layer
+    - Add entity class
+    - Add respository class
+  - Service Layer
+    - Define Interface
+    - Implementation
+  - Controller Layer
+    - Controller class that has all the end points defined
+- Can add custom exceptions
+- DTO objects
+  - Generated for communication between client and server
+- Custom Response
+  - Default API response can be overridden by creating custom response objects
+- Exception Handler
+  - In case of exception, API response has some default information like timestamp, status code, exception trace, message, API endpoint etc.
+  - This response can be customized as per client requirement by adding exception handler. 
+- Hibernate Validator for bean validation
+  - For create and update APIs, input provided by user in the request body can be validated as per client requirement using field annotations provided by ```javax.validation.constraints```.
+  - We can also provide ```message``` for each annotation to be displayed in case the user input validation fails.
