@@ -53,6 +53,20 @@ Dependencies used are as follows:
   - Contains DTOs (Data Transfer Objects) that act as a payload between client and server
 ```
 
+## API document generation
+OpenAPI 3 specification document for API is auto generated using <a href="https://github.com/springdoc/springdoc-openapi">springdoc-openapi-ui</a>
+
+As per custom path provided in application.properties, auto generated API doc is generated at custom path: 
+```
+http://localhost:<port>/api-docs/ 
+```
+
+Doc can also be accessed in the Swagger UI at path:
+```
+http://localhost:<port>/swagger-ui.html
+```
+
+
 ## Annotations
 ### Spring Boot Annotations
 <a href="https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-using-springbootapplication-annotation.html"><img alt="SpringBootApplication" src="https://img.shields.io/badge/@SpringBootApplication-blue"/></a>
