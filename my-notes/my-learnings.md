@@ -40,6 +40,15 @@
     PUT is used to update complete entity. We have to provide all the properties in request payload.<br>
     PATCH is used to update specific properties of an entity. Only those properties need to be specified.
   - **DELETE**: To delete a collection or a single resource
+- HTTP Status Codes <br>
+  - **200 OK**: Indicates that the request is successful and the response content is returned to the client as appropriate.
+  - **201 Created**: Indicates that the request is successful and a new resource is created.
+  - **202 Accepted**: Request been accepted for processing but the processing has not yet been completed.
+  - **400 Bad Request**: The server failed to process request due to malformed syntax in the request.
+  - **401 Unauthorized**: It indicates that authentication is required for the resource.
+  - **403 Forbidden**: It indicates that you are not allowed to access the resource.
+  - **404 Not Found**: It indicates that the requested resource is not found at the location specified in the request.
+  - **500 Internal Server Error**: It indicates a generic error message and it tells that an unexpected error occurred on the server side and the request cannot be fulfiled.
 - 3 layer Architecture: Client <--> Controller <--> Service <--> DAO <--> DB
 - Add new rest API end point flow:
   - [x] DAO Layer
