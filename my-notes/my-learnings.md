@@ -1,3 +1,26 @@
+- REST: REpresentational State Transfer
+  - State means Data
+  - Representation means formats (such as xml, html, json, yaml)
+  - Transfer means carrying data between consumer and provider using HTTP protocol
+- REST Architectural Constraints
+  - **Client-Server Architecture** <br>
+    Client: Frontend <br>
+    Server: Backend <br>
+    Both are independent of each other
+  - **Stateless** <br>
+    No data should be stored on the server during processing of the request transfer. <br>
+    The state of the session should be stored at client's end.<br> 
+  - **Cacheable**<br>
+    The client should have ability to store responses in cache.<br>
+    This helps improve performance.
+  - **Uniform Interface**<br>
+    A generic interface to manage all the interactions between the client and server in unified way, which simplifies and decouples the architecture.
+  - **Layered System**<br>
+    The server can have multiple layers for implementation. <br>
+    This helps to improve scalability by enabling load balancing.
+  - **Code on demand**<br>
+    Optional Constraint.<br>
+    It indicates that the functionality of client can be extended at runtime by allowing a code download from the server and executing the code. 
 - 3 layer Architecture: Client <--> Controller <--> Service <--> DAO <--> DB
 - Add new rest API end point flow:
   - [x] DAO Layer
