@@ -20,7 +20,19 @@
     This helps to improve scalability by enabling load balancing.
   - **Code on demand**<br>
     Optional Constraint.<br>
-    It indicates that the functionality of client can be extended at runtime by allowing a code download from the server and executing the code. 
+    It indicates that the functionality of client can be extended at runtime by allowing a code download from the server and executing the code.
+- REST Key Concepts:
+  - Resource: <br>
+    A resource is anything you want to expose to the outside world, through your application.<br>
+    Example: In case of Student management system, Student, Teacher, Class, Subject, School are the resources.
+  - URI: <br>
+    Uniform Resource Identifier<br>
+    We can identify unique resource using URI.<br>
+    Example: http://localhost:8080/api/students/ --> Returns all students. Resource: 'student'
+  - Sub-resource: <br>
+    Relationships are modelled by a sub-resource.<br>
+    Example: To get List of classes enrolled by a student, URI will be:<br>
+    GET /students/{sudentId}/classes --> Classes is a subresource
 - 3 layer Architecture: Client <--> Controller <--> Service <--> DAO <--> DB
 - Add new rest API end point flow:
   - [x] DAO Layer
