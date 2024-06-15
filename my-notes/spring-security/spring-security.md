@@ -1,4 +1,4 @@
-# Spring Boot Auto Configuration for Spring Security
+## Spring Boot Auto Configuration for Spring Security
 
 - spring-boot-starter-security dependency aggregate spring security related dependencies.
 - enables spring security's default configuration, which creates servlet filter as a bean named springSecurityFilterChain.
@@ -20,3 +20,11 @@
   - spring.security.user.name
   - spring.security.user.password
   - spring.security.user.roles
+
+## Basic Authentication using Spring Security
+
+- Since form based authentication is enabled by default, we need to:
+  - Generate Security Config Class
+  - With SecurityFilterChain bean
+  - where we can enable basic authentication.
+- In case of basic authentication, username and password are passed in request header
