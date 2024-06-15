@@ -4,6 +4,7 @@ import jakarta.validation.Valid;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,6 +31,7 @@ public class PostController {
 	}
 	
 	// create blob post
+	@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping("/posts")
 	public ResponseEntity<PostDto> createPost(@Valid @RequestBody PostDto postDto) {
 		return new ResponseEntity<>(postService.createPost(postDto), HttpStatus.CREATED);
@@ -53,6 +55,7 @@ public class PostController {
 	}
 	
 	// update post by id
+	@PreAuthorize("hasRole('ADMIN')")
 	@PutMapping("/posts/{id}")
 	public ResponseEntity<PostDto> updatePost(@PathVariable(name="id") long id, @Valid @RequestBody PostDto postDto) {
 		return new ResponseEntity<>(postService.updatePost(id, postDto), HttpStatus.OK);
@@ -60,6 +63,7 @@ public class PostController {
 	
 	// delete post
 	@DeleteMapping("/posts/{id}")
+	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<String> deletePost(@PathVariable(name="id") long id) {
 		postService.deletePostById(id);
 		return new ResponseEntity<>("Post entity deleted successfully.", HttpStatus.OK);
