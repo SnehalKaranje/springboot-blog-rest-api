@@ -1,4 +1,5 @@
-- 3 layer Architecture: Client <--> Controller <--> Service <--> DAO <--> DB
+## 3 layer Architecture
+- Client <--> Controller <--> Service <--> DAO <--> DB
 - Add new rest API end point flow:
   - [x] DAO Layer
     - Add entity class

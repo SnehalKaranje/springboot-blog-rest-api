@@ -1,4 +1,7 @@
-- <a href="https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-using-springbootapplication-annotation.html"><img alt="SpringBootApplication" src="https://img.shields.io/badge/@SpringBootApplication-blue"/></a> Marks entry point of spring application.
+- <a href="https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-using-springbootapplication-annotation.html"><img alt="SpringBootApplication" src="https://img.shields.io/badge/@SpringBootApplication-blue"/></a> Marks entry point of spring application. Single annotation can be used to enable 3 features:
+  - @EnableAutoConfiguration
+  - @ComponentScan
+  - @Configuration 
 
 - <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/ResponseStatus.html"><img alt="ResponseStatus" src="https://img.shields.io/badge/@ResponseStatus-blue"/></a> Cause spring boot to respond with the specified HTTP status code whenever this exception is thrown from controller.
 
