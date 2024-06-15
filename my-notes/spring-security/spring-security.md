@@ -27,4 +27,15 @@
   - Generate Security Config Class
   - With SecurityFilterChain bean
   - where we can enable basic authentication.
-- In case of basic authentication, username and password are passed in request header
+- In case of basic authentication, username and password are passed in request header.
+
+## Database Authentication
+ High level flow:
+ 
+- Authentication Filter 
+- Authentication Object (Contains username and password)
+- Authentication Manager (does not know which authentication provider to call. So, it calls 'supports()' method of all authentication providers to check which Auth Provider is responsible to authenticate request)
+- Authentication Provider (Authentication Manager manages multiple Authentication Providers like OAuth2, LDAP, DAO)
+- CustomUserDetailsService 
+- Once authentication is done, authentication manager returns Authentication Object to Authentication Filter
+- Authentication filter then stores this object in Spring Authentication Context
