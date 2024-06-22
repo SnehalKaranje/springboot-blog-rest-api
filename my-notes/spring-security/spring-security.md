@@ -28,6 +28,7 @@
   - With SecurityFilterChain bean
   - where we can enable basic authentication.
 - In case of basic authentication, username and password are passed in request header.
+- Disadvantage: Hardcoded username and password needs to be sent into header of every request.
 
 ## Database Authentication
  High level flow:
